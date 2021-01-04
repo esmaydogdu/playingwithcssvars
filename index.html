@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Css Vars</title>
+  </head>
+  <body>
+    <header id="main-header">
+      <h1>css vars</h1>
+    </header>
+    <div class="container">
+      <div class="grid">
+        <div class="box">
+          <h1>hello worldy</h1>
+          <p>
+            Lorem ipsum is a fun text but I am too lazy to copy one so here a
+            nonsense sentence that exist too many times.Lorem ipsum is a fun
+            text but I am too lazy to copy one so here a nonsense sentence that
+            exist too many times.Lorem ipsum is a fun text but I am too lazy to
+            copy one so here a nonsense sentence that exist too many times.Lorem
+            ipsum is a fun text but I am too lazy to copy one so here a nonsense
+            sentence that exist too many times.Lorem ipsum is a fun text but I
+            am too lazy to copy one so here a nonsense sentence that exist too
+            many times.
+          </p>
+        </div>
+        <div class="box">
+          <h1>hello worldy</h1>
+          <p>
+            Lorem ipsum is a fun text but I am too lazy to copy one so here a
+            nonsense sentence that exist too many times.Lorem ipsum is a fun
+            text but I am too lazy to copy one so here a nonsense sentence that
+            exist too many times.Lorem ipsum is a fun text but I am too lazy to
+            copy one so here a nonsense sentence that exist too many times.Lorem
+            ipsum is a fun text but I am too lazy to copy one so here a nonsense
+            sentence that exist too many times.Lorem ipsum is a fun text but I
+            am too lazy to copy one so here a nonsense sentence that exist too
+            many times.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      /*get css variables */
+      const box = document.querySelector(".box");
+      const boxStyle = getComputedStyle(box);
+      const boxMainColor = boxStyle.getPropertyValue("--box-main-color");
+
+      /*set css variables */
+      const header = document.querySelector("#main-header");
+      header.style.setProperty("--header-bg-color", boxMainColor);
+    </script>
+  </body>
+</html>
